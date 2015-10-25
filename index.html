@@ -5,8 +5,26 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <textarea id="score">
-    </textarea>
+    <h1>Compose music with text!</h1>
+    <h3>Instructions:</h3>
+    <p>1. Type "BPM=" followed by the beats per minute desired.</br>
+    2. Type "Type=" followed by the type of notes.
+    <p id="inner">Types = 1, 1/2, 1/4, 1/8, 1/16</p>
+    3. Type the name of the instrument you want to use followed by ": ".</br>
+    4. Type notes in the format [note][modifier][number].</br>[note] = c, d, e, f, g, a, or b</br>[modifier] = -, ^, or _</br>
+    <p id="inner">- = standard note</br>
+    ^ = sharp note</br>
+    _ = flat note</br></p>
+    [number] = 0, 1, 2, 3, 4, 5, 6, 7, or 8</br></br>
+    Note syntax example 1: c-4 = 4th C, or middle C.</br>
+    Note syntax example 2: f_3 = 3rd F flat.</br></br>
+    Every 3 spaces = 1 specified note.
+    Note: the lowest possible note is c-0, and the highest possible note is b-8.</br></br>
+    Instrument options: Piano</p>
+    <textarea id="score" placeholder="BPM=120
+Type=1
+Piano: b-4a-4g-4a-4b-4b-4b-4...a-4a-4a-4...b-4d-4d-4...b-4a-4g-4a-4b-4b-4b-4b-4a-4a-4b-4a-4g-4"></textarea>
+    <button id="play" type="button" onclick="start()">Play!</button>
   </body>
 </html>
 
